@@ -1,6 +1,6 @@
-# Solutions to HackerRank Problems
+# Algorithms and Data Structure Solutions
 
-This repo contains my Java solutions to [**Algorithms**](https://www.hackerrank.com/domains/algorithms) and [**Data Structures**](https://www.hackerrank.com/domains/data-structures) problems presented on HackerRank.
+This repository contains my Java solutions to various problem solving questions from platforms such as HackerRank and LeetCode.
 
 ## Getting Started
 
@@ -12,7 +12,7 @@ Also, a brief explanation of the solution is provided in the solution file and f
 
 ### Prerequisites
 
-HackerRank account is recommended to save progress and solutions on the platform. Otherwise, guest account is also available on HackerRank to run the code.
+HackerRank/LeetCode account is recommended to save progress and solutions on the platform. Otherwise, guest account is also available on HackerRank to run the code.
 
 ## Running the code
 
@@ -41,7 +41,3 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgements
-
-* [ismail545](https://github.com/ismail545/.github.io)
