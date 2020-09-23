@@ -1,6 +1,10 @@
 package DataStructures.Strings.ValidParenthesis;
 
-class Solution {
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
+
+class ValidParenthesis {
     public boolean isValid(String s) {
         // if length of string is odd, return false
         if (s.length() % 2 != 0) return false;
