@@ -2,28 +2,19 @@ package DataStructures.Strings.ValidatePalindrome;
 
 public class ValidatePalindrome {
     public static boolean isPalindrome(String s) {
+        s = s = s.replaceAll("[^a-zA-Z0-9]", "");
         s = s.toLowerCase();
 
-        if (s == " ") return true;
-        if (s.length() == 2) return false;
+        int left = 0,
+                right = s.length() - 1;
 
-        int right = s.length() - 1;
-
-        for (int left = 0; left < s.length() / 2; left++) {
-            char leftChar = s.charAt(left);
-            char rightChar = s.charAt(right);
-
-            if (!(leftChar >= 'a' && leftChar <= 'z')) {
-                continue;
-            } else if (!(rightChar >= 'a' && rightChar <= 'z')) {
+        while(left < right) {
+            if (s.charAt(left) == s.charAt(right)) {
+                left++;
                 right--;
-                left--;
-                continue;
+            } else {
+                return false;
             }
-
-            if (leftChar != rightChar) return false;
-
-            right--;
         }
 
         return true;
