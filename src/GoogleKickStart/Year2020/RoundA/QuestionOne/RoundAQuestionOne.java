@@ -1,9 +1,11 @@
-package GoogleKickStart.Year2020.Question1;
+package GoogleKickStart.Year2020.RoundA.QuestionOne;
 
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Scanner;
 
-public class Solution {
+public class RoundAQuestionOne {
     private static int solve(int budget, int[] prices) {
         if(prices.length == 0) return 0;
         Arrays.sort(prices);
