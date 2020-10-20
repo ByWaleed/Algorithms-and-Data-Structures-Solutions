@@ -3,11 +3,11 @@
  * Platform: LeetCode
  * URL: https://leetcode.com/problems/delete-node-in-a-linked-list/
  * */
-package DataStructures.LinkedList;
+package DataStructures.LinkedList.DeleteNodeInALinkedList;
 
 public class DeleteNodeInALinkedList {
 
-    private static class ListNode {
+    public static class ListNode {
         int val;
         ListNode next;
         ListNode(int x) { val = x; }
