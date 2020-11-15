@@ -17,39 +17,19 @@ public class SumOfNumbersInLinkedList {
     }
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode headToReturn = l1;
-
-        int carry = 0;
-        int sum = 0;
-
-        while (l1 != null  || l2 != null || carry == 1) {
-            sum = carry;
-            sum += (l1 != null) ? l1.val : 0;
-            sum += (l2 != null) ? l2.val : 0;
-
-            carry = (sum > 9) ? 1 : 0;
-            if (l1 == null) l1 = new ListNode(sum % 10);
-            else l1.val = sum % 10;
-
-            System.out.println(sum + " " + carry + " " + l1.val);
-
-            if (l1 != null) {
-                if (l1.next == null && carry == 1) {
-                    l1.next = new ListNode(1);
-                    l1 = l1.next;
-                }
-                l1 = l1.next;
-            }
-
-            if (l2 != null) {
-                if (l2.next == null && carry == 1) {
-                    l2.next = new ListNode(1);
-                    l2 = l2.next;
-                }
-                l2 = l2.next;
-            }
+        ListNode head = new ListNode(0);
+        ListNode p1 = l1, p2 = l2, p = head;
+        int c = 0;
+        while(p1!=null || p2!=null || c==1){
+            int add1 = (p1==null ? 0 : p1.val);
+            int add2 = (p2==null ? 0 : p2.val);
+            int k = add1 + add2 + c;
+            c =  k/10;
+            p.next = new ListNode(k%10);
+            p = p.next;
+            if(p1!=null){p1 = p1.next;}
+            if(p2!=null){p2 = p2.next;}
         }
-
-        return headToReturn;
+        return head.next;
     }
 }
